@@ -41,11 +41,11 @@ const { value } = await AndroidInsets.top();
 
 ### top()
 
-Get top offset of status bar
-
 ```typescript
 top() => Promise<TopReturn>
 ```
+
+Returns top offset of the status bar
 
 **Returns:** <code>Promise&lt;<a href="#topreturn">TopReturn</a>&gt;</code>
 

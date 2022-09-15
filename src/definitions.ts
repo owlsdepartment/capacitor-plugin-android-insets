@@ -1,4 +1,7 @@
 export interface AndroidInsetsPlugin {
+  /**
+   * Returns top offset of the status bar
+   */
   top(): Promise<TopReturn>;
 }
 
