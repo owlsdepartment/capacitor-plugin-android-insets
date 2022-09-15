@@ -1,5 +1,6 @@
 package com.owlsdepartment.plugin.android.insets;
 
+import android.app.Activity;
 import com.getcapacitor.JSObject;
 import com.getcapacitor.Plugin;
 import com.getcapacitor.PluginCall;
@@ -9,14 +10,19 @@ import com.getcapacitor.annotation.CapacitorPlugin;
 @CapacitorPlugin(name = "AndroidInsets")
 public class AndroidInsetsPlugin extends Plugin {
 
-    private AndroidInsets implementation = new AndroidInsets();
+    private AndroidInsets implementation;
+
+    @Override
+    public void load() {
+        this.implementation = new AndroidInsets(getActivity());
+    }
 
     @PluginMethod
-    public void echo(PluginCall call) {
-        String value = call.getString("value");
-
+    public void top(PluginCall call) {
+        float statusBarHeight = implementation.getTop();
         JSObject ret = new JSObject();
-        ret.put("value", implementation.echo(value));
+
+        ret.put("value", statusBarHeight);
         call.resolve(ret);
     }
 }

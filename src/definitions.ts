@@ -1,3 +1,7 @@
 export interface AndroidInsetsPlugin {
-  echo(options: { value: string }): Promise<{ value: string }>;
+  top(): Promise<TopReturn>;
+}
+
+export interface TopReturn {
+  value: number;
 }

@@ -9,10 +9,9 @@ import Capacitor
 public class AndroidInsetsPlugin: CAPPlugin {
     private let implementation = AndroidInsets()
 
-    @objc func echo(_ call: CAPPluginCall) {
-        let value = call.getString("value") ?? ""
+    @objc func top(_ call: CAPPluginCall) {
         call.resolve([
-            "value": implementation.echo(value)
+            "value": implementation.top()
         ])
     }
 }
