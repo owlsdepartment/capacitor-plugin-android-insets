@@ -1,6 +1,6 @@
 {
   "name": "capacitor-plugin-android-insets",
-  "version": "1.0.0",
+  "version": "0.0.2",
   "description": "Capacitor plugin for retrieving proper top offset of Android status bar",
   "main": "dist/plugin.cjs.js",
   "module": "dist/esm/index.js",
@@ -41,7 +41,8 @@
     "build": "npm run clean && npm run docgen && tsc && rollup -c rollup.config.js",
     "clean": "rimraf ./dist",
     "watch": "tsc --watch",
-    "prepublishOnly": "npm run build"
+    "prepublishOnly": "npm run build",
+    "prepare": "npm run build"
   },
   "devDependencies": {
     "@capacitor/android": "^5.0.0",
