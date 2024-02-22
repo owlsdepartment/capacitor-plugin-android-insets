@@ -14,4 +14,10 @@ public class AndroidInsetsPlugin: CAPPlugin {
             "value": implementation.top()
         ])
     }
+
+    @objc func bottom(_ call: CAPPluginCall) {
+        call.resolve([
+            "value": implementation.bottom()
+        ])
+    }
 }

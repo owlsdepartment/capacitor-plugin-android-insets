@@ -12,14 +12,28 @@ public class AndroidInsets {
     }
 
     public float getTop() {
-        DisplayMetrics metrics = this.activity.getResources().getDisplayMetrics();
-        int resourceId = this.activity.getResources().getIdentifier("status_bar_height", "dimen", "android");
+        Resources resources = this.activity.getResources();
+        DisplayMetrics metrics = resources.getDisplayMetrics();
+        int resourceId = resources.getIdentifier("status_bar_height", "dimen", "android");
         float titleBarHeight = 0;
 
         if (resourceId > 0) {
-            titleBarHeight = this.activity.getResources().getDimensionPixelSize(resourceId);
+            titleBarHeight = resources.getDimensionPixelSize(resourceId);
         }
 
         return titleBarHeight / metrics.density;
+    }
+
+    public float getBottom() {
+        Resources resources = this.activity.getResources();
+        DisplayMetrics metrics = resources.getDisplayMetrics();
+        int resourceId = resources.getIdentifier("navigation_bar_height", "dimen", "android");
+        float navigationBarHeight = 0;
+
+        if (resourceId > 0) {
+            navigationBarHeight = resources.getDimensionPixelSize(resourceId);
+        }
+
+        return navigationBarHeight / metrics.density;
     }
 }
