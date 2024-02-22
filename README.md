@@ -25,6 +25,7 @@ This plugin is required only on Android when using `StatusBar.setOverlaysWebView
 import { AndroidInsets } from 'capacitor-plugin-android-insets'
 
 const { value } = await AndroidInsets.top();
+const { value } = await AndroidInsets.bottom();
 ```
 
 ## API
@@ -32,6 +33,7 @@ const { value } = await AndroidInsets.top();
 <docgen-index>
 
 * [`top()`](#top)
+* [`bottom()`](#bottom)
 * [Interfaces](#interfaces)
 
 </docgen-index>
@@ -52,10 +54,30 @@ Returns top offset of the status bar
 --------------------
 
 
+### bottom()
+
+```typescript
+bottom() => Promise<BottomReturn>
+```
+
+Returns bottom offset of the navigation bar
+
+**Returns:** <code>Promise&lt;<a href="#bottomreturn">BottomReturn</a>&gt;</code>
+
+--------------------
+
+
 ### Interfaces
 
 
 #### TopReturn
+
+| Prop        | Type                |
+| ----------- | ------------------- |
+| **`value`** | <code>number</code> |
+
+
+#### BottomReturn
 
 | Prop        | Type                |
 | ----------- | ------------------- |

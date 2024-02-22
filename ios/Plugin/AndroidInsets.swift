@@ -4,4 +4,8 @@ import Foundation
     @objc public func top() -> Float {
         return 0
     }
+
+    @objc public func bottom() -> Float {
+        return 0
+    }
 }
