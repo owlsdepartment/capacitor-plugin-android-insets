@@ -51,6 +51,9 @@ Returns top offset of the status bar
 
 **Returns:** <code>Promise&lt;<a href="#topreturn">TopReturn</a>&gt;</code>
 
+--------------------
+
+
 ### bottom()
 
 ```typescript
@@ -72,6 +75,7 @@ Returns bottom offset of the navigation bar
 | Prop        | Type                |
 | ----------- | ------------------- |
 | **`value`** | <code>number</code> |
+
 
 #### BottomReturn
 

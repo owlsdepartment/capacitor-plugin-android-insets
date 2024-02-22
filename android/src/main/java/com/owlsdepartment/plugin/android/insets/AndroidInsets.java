@@ -1,5 +1,6 @@
 package com.owlsdepartment.plugin.android.insets;
 
+import android.content.res.Resources;
 import android.util.DisplayMetrics;
 import androidx.appcompat.app.AppCompatActivity;
 
